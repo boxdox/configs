@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { writeFileSync } = require("fs")
 const inquirer = require("inquirer")
 const fetch = require("node-fetch")
