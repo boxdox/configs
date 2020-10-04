@@ -12,14 +12,17 @@ const fetcher = fileName =>
     .then(res => res.text())
     .catch(e => errorMsg(e))
 
-console.log(chalk.green("configs by @boxdox"))
-console.log(chalk.green("---------------------"))
+console.log(chalk.green.underline.bold("configs by @boxdox"))
+console.log(
+  chalk.blue("some commonly used configuration files. very opinionated.")
+)
+console.log()
 
 inquirer
   .prompt([
     {
       type: "checkbox",
-      message: "Choose Configs:",
+      message: "choose configs:",
       name: "configList",
       choices: [
         {
@@ -34,7 +37,7 @@ inquirer
     },
     {
       type: "confirm",
-      message: "Using Typescript?",
+      message: "using typescript?",
       name: "typescript",
       default: true,
     },
@@ -63,3 +66,6 @@ inquirer
         })
         .catch(err => console.log(chalk.red(err)))
   })
+  .catch(() =>
+    console.log(chalk.blue("error. open an issue on https://git.io/JUdeg"))
+  )
