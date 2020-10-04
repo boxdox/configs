@@ -1,6 +1,6 @@
 {
   "name": "@boxdox/config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "fetch all my configs!",
   "main": "index.js",
   "bin": "./index.js",
@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "cli-spinner": "^0.2.10",
     "inquirer": "^7.3.3",
     "node-fetch": "^2.6.1"
   }
